@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Combined Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        .outer {
+            display: flex;
+            justify-content: space-around;
+        }
+        .inner {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <p>Population distribution of Australian capital cities</p>
+            <div id="mapChart"></div>
+        </div>
+        <div class="inner">
+            <p>Comparison of house price trends in capital cities</p>
+            <div id="lineChart"></div>
+        </div>
+    </div>
+
+    <script>
+        // Map chart spec
+        const mapSpec = {
+            // (Paste your map chart JSON spec here)
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            // ... (rest of your map chart spec)
+        };
+
+        // Line chart spec
+        const lineSpec = {
+            // (Paste your line chart JSON spec here)
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            // ... (rest of your line chart spec)
+        };
+
+        // Embed the charts
+        vegaEmbed("#mapChart", mapSpec, {mode: "vega-lite"});
+        vegaEmbed("#lineChart", lineSpec, {mode: "vega-lite"});
+    </script>
+</body>
+</html>
