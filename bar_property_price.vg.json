@@ -1,8 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Comparison of house price trends in capital cities"
-    },
     "width": 1000,
     "height": 400,
     "data": {
